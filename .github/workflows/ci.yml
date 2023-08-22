@@ -19,6 +19,6 @@ jobs:
         run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
       - name: Build the docker image
-        run: docker build -t bankist-app G:\JS-Jonas-Practice\Banklist
+        run: docker build -t bankist-app .
       - name: Push to DockerHub
         run: docker push reza1996/bankist-app:latest
