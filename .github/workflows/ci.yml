@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker image
-        run: docker build -t bankist-app:latest .
+        run: docker build -t reza1996/bankist-app:latest .
 
       - name: Login to Docker Hub (if using)
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker image (if using)
-        run: docker push bankist-app:latest
+        run: docker push reza1996/bankist-app:latest
